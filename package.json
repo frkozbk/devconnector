@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "client-install": "npm start --prefix client",
+    "client": "npm start --prefix client",
+    "app": "concurrently \"npm run dev\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +18,7 @@
     "express": "^4.16.3",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.2.0",
+    "lodash": "^4.17.11",
     "mongoose": "^5.0.12",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
